@@ -1,5 +1,4 @@
 #include "tuball.dtsi"
-#include "split_input.dtsi"
 #include "tuball-layouts.dtsi"
 #include <dt-bindings/zmk/matrix_transform.h>
 
