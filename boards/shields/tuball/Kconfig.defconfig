@@ -1,3 +1,7 @@
+config ZMK_LOGGING_MINIMAL
+    bool "Suppress all ZMK debug log messages"
+    default false
+
 if SHIELD_TUBALL_DONGLE || SHIELD_TUBALL_LEFT || SHIELD_TUBALL_RIGHT
 config ZMK_SPLIT 
     default y
@@ -10,6 +14,8 @@ config ZMK_KEYBOARD_NAME
 	default "tuball"
 config ZMK_SPLIT_ROLE_CENTRAL
 	default y
+config ZMK_LOG_LEVEL
+    default 4
 endif
 
 if SHIELD_TUBALL_RIGHT
