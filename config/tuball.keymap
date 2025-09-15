@@ -68,7 +68,7 @@
 		&mo THUMB_LEFT_SCROLL		     &none
 		&mkp RCLK                            &none
 	                   /* Inner Buttons  */
-		&studio_unlock  &bt BT_NXT   &bt BT_CLR
+		&studio_unlock  &none &none
                      /* Handiness         Orientation */
 			&mo 1                   &mo 2
             >;
@@ -251,7 +251,7 @@
 
             bindings = <
     &kp ESC   &kp GRAVE &none        &none        &none        &none			     &kp GRAVE &kp EQUAL  &kp LPAR &kp RPAR &kp MINUS &kp BSPC
-    &none     &none     &none        &bt BT_CLR   &none        &none                         &none     &none      &none    &none    &kp SQT   &kp RET
+    &none     &none     &none        &none	  &none        &none                         &none     &none      &none    &none    &kp SQT   &kp RET
     &kp LCTRL &none     &none        &none        &none        &studio_unlock                &none     &none      &kp LBKT &kp RBKT &kp BSLH  &kp RCTRL
                         &kp LGUI     &kp LALT     &kp LSHIFT   &none  	 &kp SPACE &kp SPACE &none     &kp RSHIFT &kp RALT &kp K_APP
 		/* Trackball buttons are transparent in this layer */
