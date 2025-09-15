@@ -1,0 +1,44 @@
+#include "tuball.dtsi"
+#include "pmw3610.dtsi"
+#include "split_input.dtsi"
+#include "tuball-layouts.dtsi"
+#include <dt-bindings/zmk/input_transform.h>
+
+&default_transform {
+	row-offset = <4>;
+};
+ 
+&spi0 {
+    status = "okay";
+};
+
+&trackball_split_input { // local trackball *split* input device child node
+	device = <&trackball>;
+};
+
+/ {
+	chosen {
+		zmk,kscan = &kscan0;
+	};
+
+    kscan0: kscan {
+        compatible = "zmk,kscan-gpio-direct";
+        wakeup-source;
+        input-gpios
+            = <&pro_micro 9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  /* Button 1 */
+            , <&pro_micro 8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  /* Button 2 */
+            , <&pro_micro 7 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  /* Button 3 */
+            , <&pro_micro 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  /* Button 4 */
+            , <&pro_micro 5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  /* Button 5 */
+            , <&pro_micro 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>  /* Button 6 */
+
+            , <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> /* Studio Unlock */
+            , <&pro_micro 16 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> /* BT Select */
+            , <&pro_micro 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> /* BT Reset  */
+            , <&pro_micro 21 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> /* Handness: Pressed - Right, Released - Left */
+ 	    , <&pro_micro 20 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)> /* Orientation: Pressed - Fingers, Released - Thumbs */
+            ;
+    };
+
+
+};
