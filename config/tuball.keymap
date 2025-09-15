@@ -183,7 +183,7 @@
     &kp LCTRL           &kp K_UNDO      &kp K_CUT        &kp K_COPY     &kp K_PASTE     &kp DELETE                   &kp INSERT    &mkp LCLK &mkp MCLK &mkp RCLK  &none      &kp RCTRL
                                         &kp LGUI         &kp LALT       &kp LSHIFT      &lt CURSOR_LEFT SPACE  &kp SPACE &kp SPACE &none               &kp RSHIFT &kp RALT   &kp K_APP
 		/* Trackball buttons are transparent in this layer */
-		&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans>
+		&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
            >;
         };
 
@@ -206,7 +206,7 @@
     &kp LCTRL           &kp K_UNDO      &mkp RCLK  &mkp MCLK  &mkp LCLK  &kp DELETE                     &kp INSERT             &kp K_CUT      &kp K_COPY     &kp K_PASTE      &none     &kp RCTRL
                                         &kp LGUI   &kp LALT   &kp LSHIFT &none      &kp SPACE &kp SPACE &lt CURSOR_RIGHT SPACE &kp RSHIFT     &kp RALT       &kp K_APP
 		/* Trackball buttons are transparent in this layer */
-		&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans>
+		&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
             >;
         };
 
@@ -230,7 +230,7 @@
     &kp LCTRL           &kp F11  &kp F12    &none    &none      &none                        &none  &none      &kp COMMA  &kp DOT   &kp FSLH  &kp RCTRL
                                  &kp LGUI   &kp LALT &kp LSHIFT &none  	&kp SPACE &kp SPACE  &none  &kp RSHIFT &kp RALT   &kp K_APP
 		/* Trackball buttons are transparent in this layer */
-		&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans>
+		&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
             >;
         };
 
@@ -257,7 +257,7 @@
     &kp LCTRL &none     &none        &none        &none        &studio_unlock                &none     &none      &kp LBKT &kp RBKT &kp BSLH  &kp RCTRL
                         &kp LGUI     &kp LALT     &kp LSHIFT   &none  	 &kp SPACE &kp SPACE &none     &kp RSHIFT &kp RALT &kp K_APP
 		/* Trackball buttons are transparent in this layer */
-		&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans>
+		&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
             >;
         };
 
