@@ -1,7 +1,7 @@
 #include "tuball.dtsi"
 #include "tuball-layouts.dtsi"
 
-&physical_layout0_layout {
+&physical_layout0 {
     transform = <&default_transform>;
 };
 
