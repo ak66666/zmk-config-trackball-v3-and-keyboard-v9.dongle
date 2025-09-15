@@ -267,7 +267,14 @@
         extra1 {status = "reserved";};
         extra2 {status = "reserved";};
         extra3 {status = "reserved";};
+    };
 
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <CURSOR_RIGHT CURSOR_LEFT>;
+            then-layer = <NUMBERS_FKEYS>;
+        };
     };
 
 };

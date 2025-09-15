@@ -1,6 +1,10 @@
 #include "tuball.dtsi"
 #include "tuball-layouts.dtsi"
 
+&physical_layout0_layout {
+    transform = <&default_transform>;
+};
+
 / {
 	chosen {
 		zmk,kscan = &kscan0;
