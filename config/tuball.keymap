@@ -19,6 +19,7 @@
 
 // layers
 
+// Trackball layers
 #define THUMB_LEFT  0
 #define THUMB_RIGHT 1
 #define FINGER_LEFT 2
@@ -26,6 +27,11 @@
 #define THUMB_LEFT_SCROLL  4
 #define THUMB_RIGHT_SCROLL 5
 #define FINGERS_SCROLL 6
+// Keyboard layers
+#define CURSOR_RIGHT 7
+#define CURSOR_LEFT 8
+#define NUMBERS_FKEYS 9
+#define EXTRA_RIGHT 10
 
 // Mouse speed increased
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1000  // default: 600
@@ -54,6 +60,12 @@
 	// Layer 0
         THUMB_LEFT {
             bindings = <
+		/* keyboard */ 
+    &kp ESC                &kp Q    &kp W    &kp E     &kp R      &kp T                                         &kp Y            &kp U            &kp I     &kp O     &kp P    &kp BSPC
+    &lt EXTRA_RIGHT TAB    &kp A    &kp S    &kp D     &kp F      &kp G                                         &kp H            &kp J            &kp K     &kp L     &kp SEMI &kp RET
+    &kp LCTRL              &kp Z    &kp X    &kp C     &kp V      &kp B                                         &kp N            &kp M            &kp COMMA &kp DOT   &kp FSLH &kp RCTRL
+                                    &kp LGUI &kp LALT  &kp LSHIFT &lt CURSOR_LEFT SPACE &kp SPACE &kp SPACE  &lt CURSOR_RIGHT SPACE &kp RSHIFT    &kp RALT  &kp K_APP
+		/* Trackball */ 
 			&mkp LCLK             	&kp ESC
 		&mo THUMB_LEFT_SCROLL		     &none
 		&mkp RCLK                            &none
@@ -68,6 +80,12 @@
 	// Layer 1
         THUMB_RIGHT {
             bindings = <
+		/* keyboard is transparent */ 
+		&trans &trans &trans &trans &trans &trans                    &trans &trans &trans &trans &trans &trans 
+		&trans &trans &trans &trans &trans &trans                    &trans &trans &trans &trans &trans &trans 
+		&trans &trans &trans &trans &trans &trans                    &trans &trans &trans &trans &trans &trans 
+		              &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans 
+ 		/* Trackball */ 
      			&kp ESC        		&mkp LCLK             
 	       &none  				     &mo THUMB_RIGHT_SCROLL
 	       &none  	 			     &mkp RCLK                     
@@ -81,6 +99,12 @@
 	// Layer 2
         FINGER_LEFT {
             bindings = <
+		/* keyboard is transparent */ 
+		&trans &trans &trans &trans &trans &trans                    &trans &trans &trans &trans &trans &trans 
+		&trans &trans &trans &trans &trans &trans                    &trans &trans &trans &trans &trans &trans 
+		&trans &trans &trans &trans &trans &trans                    &trans &trans &trans &trans &trans &trans 
+		              &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans 
+ 		/* Trackball */ 
 			&mkp RCLK		&mkp LCLK             
 		&mo FINGERS_SCROLL			&mkp MCLK
 		&kp ESC					&kp ESC					
@@ -94,6 +118,12 @@
 	// Layer 3
         FINGER_RIGHT {
             bindings = <
+		/* keyboard is transparent */ 
+		&trans &trans &trans &trans &trans &trans                    &trans &trans &trans &trans &trans &trans 
+		&trans &trans &trans &trans &trans &trans                    &trans &trans &trans &trans &trans &trans 
+		&trans &trans &trans &trans &trans &trans                    &trans &trans &trans &trans &trans &trans 
+		              &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans 
+ 		/* Trackball */ 
 			&mkp LCLK             &mkp RCLK 
 		&mkp MCLK				&mo FINGERS_SCROLL
 		&kp ESC	        			&kp ESC
@@ -109,9 +139,132 @@
 	// It is detected in trackball_listener telling to switch from the pointing movement to scrolling.
 	// Need separate layers for orientation to implement 
  	// Layers 4, 5, 6
-/* 4 */ THUMB_LEFT_SCROLL  {bindings = <&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans>;};
-/* 5 */ THUMB_RIGHT_SCROLL {bindings = <&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans>;};
-/* 6 */ FINGERS_SCROLL     {bindings = <&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans>;};
+/* 4 */ THUMB_LEFT_SCROLL  {bindings = <		
+		&trans &trans &trans &trans &trans &trans                    &trans &trans &trans &trans &trans &trans 
+		&trans &trans &trans &trans &trans &trans                    &trans &trans &trans &trans &trans &trans 
+		&trans &trans &trans &trans &trans &trans                    &trans &trans &trans &trans &trans &trans 
+		              &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans 
+                	
+			&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans>;};
+/* 5 */ THUMB_RIGHT_SCROLL  {bindings = <		
+		&trans &trans &trans &trans &trans &trans                    &trans &trans &trans &trans &trans &trans 
+		&trans &trans &trans &trans &trans &trans                    &trans &trans &trans &trans &trans &trans 
+		&trans &trans &trans &trans &trans &trans                    &trans &trans &trans &trans &trans &trans 
+		              &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans 
+                	
+			&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans>;};
+/* 6 */ FINGERS_SCROLL     {bindings = <		
+		&trans &trans &trans &trans &trans &trans                    &trans &trans &trans &trans &trans &trans 
+		&trans &trans &trans &trans &trans &trans                    &trans &trans &trans &trans &trans &trans 
+		&trans &trans &trans &trans &trans &trans                    &trans &trans &trans &trans &trans &trans 
+		              &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans 
+                	
+			&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans>;};
+
+
+
+// CURSOR_RIGHT 7
+        cursor_right_layer {
+
+// Cursor Control on the right (Right Space)
+// ,------------------------------------------------------------------------------------.
+// | Esc  |Break |WheelD|MousUp|WheelU| PgUp || PgUp | Home |  Up  | End  |   `  | Del  |
+// |------+------+------+------+------+-------+------+------+------+------+------+------|
+// |      |SelAll|MousLt|MousDn|MousRt| PgDn || PgDn | Left | Down |Right | ...  |      |
+// |------+------+------+------+------+------|+------+------+------+------+------+------|
+// |      | Undo | Cut  | Copy | Paste| Del  ||  Ins |MsBtLe|MsBtMi|MsBtRt| ...  |      |
+// `------+------+------+------+------+------++------+------+------+------+------+------.
+//               |      |      |      |      ||   X  |      |      |      |
+//               +------+------+------+------++------+------+------+------+
+
+            bindings = <
+    &kp ESC             &kp PAUSE_BREAK &msc SCRL_DOWN   &mmv MOVE_UP   &msc SCRL_UP    &kp PG_UP                    &kp PG_UP     &kp HOME  &kp UP    &kp END    &kp GRAVE  &kp DEL
+    &lt EXTRA_RIGHT RET &none           &mmv MOVE_LEFT   &mmv MOVE_DOWN &mmv MOVE_RIGHT &kp PG_DN                    &kp PG_DN     &kp LEFT  &kp DOWN  &kp RIGHT  &none      &kp RET
+    &kp LCTRL           &kp K_UNDO      &kp K_CUT        &kp K_COPY     &kp K_PASTE     &kp DELETE                   &kp INSERT    &mkp LCLK &mkp MCLK &mkp RCLK  &none      &kp RCTRL
+                                        &kp LGUI         &kp LALT       &kp LSHIFT      &lt CURSOR_LEFT SPACE  &kp SPACE &kp SPACE &none               &kp RSHIFT &kp RALT   &kp K_APP
+		/* Trackball buttons are transparent in this layer */
+		&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans>
+           >;
+        };
+
+// CURSOR_LEFT 8
+        cursor_left_layer {
+// Cursor Control on the left (Left Space)
+// ,------------------------------------------------------------------------------------.
+// |  Esc |Break | Home |  Up  | End  | PgUp || PgUp |WheelU|MousUp|WheelD|   `  | Del  |
+// |------+------+------+------+------+------++-------------+------+------+------+------|
+// | Enter|SelAll|Right | Down | Left | PgDn || PgDn |MousLt|MousDn|MousRt| xxx  |Enter |
+// |------+------+------+------+------+------++------|------+------+------+------+------|
+// |      | xxx  |MsBtRt|MsBtMi|MsBtLe| Del  || Ins  | Cut  | Copy | Paste| xxx  |      |
+// `------+------+------+------+------+------++------+------+------+------+------+------.
+//               |      |      |      |   X  ||      |      |      |      |
+//               +------+------+------+------++------+------+------+------+
+
+            bindings = <
+    &kp ESC             &kp PAUSE_BREAK &kp HOME   &kp UP     &kp END    &kp PG_UP                      &kp PG_UP              &msc SCRL_UP   &mmv MOVE_UP   &msc SCRL_DOWN   &kp GRAVE &kp DEL
+    &lt EXTRA_RIGHT RET &none           &kp LEFT   &kp DOWN   &kp RIGHT  &kp PG_DN                      &kp PG_DN              &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT  &none     &kp RET
+    &kp LCTRL           &kp K_UNDO      &mkp RCLK  &mkp MCLK  &mkp LCLK  &kp DELETE                     &kp INSERT             &kp K_CUT      &kp K_COPY     &kp K_PASTE      &none     &kp RCTRL
+                                        &kp LGUI   &kp LALT   &kp LSHIFT &none      &kp SPACE &kp SPACE &lt CURSOR_RIGHT SPACE &kp RSHIFT     &kp RALT       &kp K_APP
+		/* Trackball buttons are transparent in this layer */
+		&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans>
+            >;
+        };
+
+// NUMBERS_FKEYS 9
+        numbers_layer {
+// Numbers on the home row, FNs on the top row, symbols in the second row
+// (Lower or Raise)
+// ,------------------------------------------------------------------------------------.
+// | Esc  |   1  |   2  |   3  |   4  |   5  ||   6  |   7  |   8  |   9  |   0  |BackSp|
+// |------+------+------+------+------+------||------+------+------+------+------+------|
+// |      |   F1 |   F2 |   F3 |   F4 |   F5 ||   F6 |   F7 |   F8 |   F9 |   F10| Enter|
+// |------+------+------+------+------+--------------+------+------+------+------+------|
+// |      |  F11 |  F12 | LAlt |  xxx | xxx  || xxx  |  xxx |   ,  |   .  |   /  |      |
+// `------+------+------+------+------+------++------+------+------+------+------+------.
+//               |      |      |      |      ||      |      |      |      |
+//               +------+------+------+------++------+------+------+------+
+
+            bindings = <
+    &kp ESC             &kp N1   &kp N2     &kp N3   &kp N4     &kp N5                       &kp N6 &kp N7     &kp N8     &kp N9    &kp N0    &kp BSPC
+    &lt EXTRA_RIGHT TAB &kp F1	 &kp F2     &kp F3   &kp F4     &kp F5                       &kp F6 &kp F7     &kp F8     &kp F9    &kp F10   &kp RET
+    &kp LCTRL           &kp F11  &kp F12    &none    &none      &none                        &none  &none      &kp COMMA  &kp DOT   &kp FSLH  &kp RCTRL
+                                 &kp LGUI   &kp LALT &kp LSHIFT &none  	&kp SPACE &kp SPACE  &none  &kp RSHIFT &kp RALT   &kp K_APP
+		/* Trackball buttons are transparent in this layer */
+		&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans>
+            >;
+        };
+
+// EXTRA_RIGHT 10
+        extra_right_layer {
+// ExtraRightSide (the keys from the right side which did not fit into the matrix)
+// ,-----------------------------------------------------------------------------------.
+// | Esc  |   `  |Prof.0|Prof.1|Prof.2|Prof.3|   `  |   =  |   (  |   )  |   -  |      |
+// |------+------+------+------+------+-------------+------+------+------+------+------|
+// |******|      |      |      |      |      |      |      |      |      |  '   |      |
+// This is the           Clear  Output Output
+// key turning           Current BLE    USB
+// this layer on         Profile
+// |------+------+------+------+------+------|------+------+------+------+------+------|
+// |      |      |      |      |      |Studio|      |      |   [  |   ]  |  \   |      |
+// |      |      |      |      |      |Unlock|      |      |      |      |      |      |
+// `------+------+------+------+------+------+------+------+------+------+------+------.
+//               |      |      |      |      |      |      |      |      |
+//               +------+------+------+------+------+------+------+------+
+
+            bindings = <
+    &kp ESC   &kp GRAVE &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3                  &kp GRAVE &kp EQUAL  &kp LPAR &kp RPAR &kp MINUS &kp BSPC
+    &none     &none     &none        &bt BT_CLR   &none        &none                         &none     &none      &none    &none    &kp SQT   &kp RET
+    &kp LCTRL &none     &none        &none        &none        &studio_unlock                &none     &none      &kp LBKT &kp RBKT &kp BSLH  &kp RCTRL
+                        &kp LGUI     &kp LALT     &kp LSHIFT   &none  	 &kp SPACE &kp SPACE &none     &kp RSHIFT &kp RALT &kp K_APP
+		/* Trackball buttons are transparent in this layer */
+		&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans>
+            >;
+        };
+
+
+
+
+
 
         extra1 {status = "reserved";};
         extra2 {status = "reserved";};
