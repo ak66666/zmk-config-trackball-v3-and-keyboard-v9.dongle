@@ -15,7 +15,7 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_ROLE_CENTRAL
 	default y
 config ZMK_LOG_LEVEL
-    default 4
+    default 5
 endif
 
 if SHIELD_TUBALL_RIGHT
@@ -23,7 +23,7 @@ config SPI
     default y
 endif
 
-if SHIELD_TUBALL_LEFT
-config I2C
-    default y
-endif
+#if SHIELD_TUBALL_LEFT
+#config I2C
+#    default y
+#endif
