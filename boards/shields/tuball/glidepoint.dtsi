@@ -12,9 +12,9 @@
 &i2c0 {
     status = "okay";
     
-    glidepoint: glidepoint@1 {
+    glidepoint: glidepoint@2a {
         compatible = "cirque,pinnacle";
-        reg = <0x1>;
+        reg = <0x2a>;
         status = "okay";
 	// AK: Used 107 in the middle of Nice!Nano since no free ProMicro pins are left in the key matrix. 
 	dr-gpios = <&gpio1 7 GPIO_ACTIVE_HIGH>;

@@ -31,9 +31,9 @@
         #address-cells = <1>;
         #size-cells = <1>;
 
-        glidepoint_split_input: glidepoint_split_input@1 { // touchpad's split input device
+        glidepoint_split_input: glidepoint_split_input@2a { // touchpad's split input device
             compatible = "zmk,input-split";
-            reg = <0x1>;
+            reg = <0x2a>;
         };
     };
 

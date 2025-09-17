@@ -14,7 +14,7 @@
     status = "okay";
 };
 
-&glidpoint_split_input { // local glidepoint touchpad *split* input device child node
+&glidepoint_split_input { // local glidepoint touchpad *split* input device child node
 	device = <&glidepoint>;
 };
  
