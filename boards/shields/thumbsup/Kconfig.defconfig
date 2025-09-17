@@ -1,6 +1,6 @@
-config ZMK_LOGGING_MINIMAL
-    bool "Suppress all ZMK debug log messages"
-    default false
+#config ZMK_LOGGING_MINIMAL
+#    bool "Suppress all ZMK debug log messages"
+#    default false
 
 if SHIELD_THUMBSUP_DONGLE || SHIELD_THUMBSUP_KEYBOARD || SHIELD_THUMBSUP_TRACKBALL
 config ZMK_SPLIT 
@@ -9,21 +9,21 @@ config ZMK_POINTING
     default y
 endif
 
-if SHIELD_thumbsup_DONGLE
+if SHIELD_THUMBSUP_DONGLE
 config ZMK_KEYBOARD_NAME
 	default "thumbsup"
 config ZMK_SPLIT_ROLE_CENTRAL
 	default y
-config ZMK_LOG_LEVEL
-    default 5
+#config ZMK_LOG_LEVEL
+#    default 5
 endif
 
-if SHIELD_thumbsup_trackball
+if SHIELD_THUMBSUP_TRACKBALL
 config SPI
     default y
 endif
 
-#if SHIELD_thumbsup_keyboard
+#if SHIELD_THUMBSUP_KEYBOARD
 #config I2C
 #    default y
 #endif
