@@ -1,6 +1,6 @@
 #include "tuball.dtsi"
 #include "pmw3610.dtsi"
-#include "split_input.dtsi"
+#include "split_input_proglide.dtsi"
 #include "tuball-layouts.dtsi"
 #include <dt-bindings/zmk/input_transform.h>
 
