@@ -2,28 +2,28 @@ config ZMK_LOGGING_MINIMAL
     bool "Suppress all ZMK debug log messages"
     default false
 
-if SHIELD_TUBALL_DONGLE || SHIELD_TUBALL_LEFT || SHIELD_TUBALL_RIGHT
+if SHIELD_THUMBSUP_DONGLE || SHIELD_THUMBSUP_KEYBOARD || SHIELD_THUMBSUP_TRACKBALL
 config ZMK_SPLIT 
     default y
 config ZMK_POINTING
     default y
 endif
 
-if SHIELD_TUBALL_DONGLE
+if SHIELD_thumbsup_DONGLE
 config ZMK_KEYBOARD_NAME
-	default "tuball"
+	default "thumbsup"
 config ZMK_SPLIT_ROLE_CENTRAL
 	default y
 config ZMK_LOG_LEVEL
     default 5
 endif
 
-if SHIELD_TUBALL_RIGHT
+if SHIELD_thumbsup_trackball
 config SPI
     default y
 endif
 
-#if SHIELD_TUBALL_LEFT
+#if SHIELD_thumbsup_keyboard
 #config I2C
 #    default y
 #endif

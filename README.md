@@ -1,12 +1,17 @@
-# ThumbsUp! Trackball v3, now with dongle!
+# ThumbsUp! Trackball v3 and ThumbsUp! Keyboard v9 work together through a dongle!
 
 Borrowed the code from https://github.com/kaihchang/zmk-config-kai-cosmos-dongle
-Adjusted the MCU pin and keymap to ThumbsUp! trackball v3: https://github.com/ak66666/ThumbsUp-Trackball-v3
- 
+
+Added the ThumbsUp! v9 keyboard to the trackball configuration:
+https://github.com/ak66666/zmk-config-trackball.v3.dongle 
+https://github.com/ak66666/zmk-config-thumbsup
+
+
+Keyboard supports ProGlide Cirque touchpad. 
+All the functions of the keyboard and the trackball are preserved.
+
 
 From kai-cosmos:
-
-
 What's good about ZMK dongles?<br/>
 - Almost immediate connection and wake-up from sleep mode.<br/>
 - No more dependent from less stable Bluetooth connections.<br/>
@@ -17,11 +22,4 @@ Surely there's something bad?<br/>
 - Extra cost for a spare MCU, seeeduino nrf52840 sense in my case here.<br/>
 - Takes up an extra USB slot on your device.
 
-Recommend setting CONFIG_PMW3610_REPORT_INTERVAL_MIN to only 8 if MCU is using chip antenna (125Hz) instead of PCB antennae (250Hz).
-
-Todo:
-- Dongle ✅
-- ZMK Studio ✅
-- Scroll layer ✅
-- Most frequent transmit (125Hz) ✅
-- Built-in cursor acceleration ✅
+(end of quote)
