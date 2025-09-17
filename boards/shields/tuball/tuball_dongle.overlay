@@ -86,7 +86,7 @@
 	   // The regular scrolling assumes the scroling wheel, which is not used here, so &zip_scroll_transform is not applicable and does not work.
 	   // &zip_scroll_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT) // Inverts the pointer direction, from the default inversion..
         >;
-//	process-next; // To process the scroller layer, if/when it is activated. Without this command the processing would stop here.
+//	process-next; 
     };
 
     /* layer-1 Thumb Right Hand pointer */
@@ -100,11 +100,27 @@
 	   // The regular scrolling assumes the scroling wheel, which is not used here, so &zip_scroll_transform is not applicable and does not work.
 	   // &zip_scroll_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT) // Inverts the pointer direction, from the default inversion..
         >;
-//	process-next; // To process the scroller layer, if/when it is activated. Without this command the processing would stop here.
+//	process-next; 
+
     };
 
 
   };
+
+
+&glidepoint_split_listener { // local glidepoint touchpad  input split device child node, receiving events from the peripheral and raising them locally
+    status = "okay";
+    // I want to use touchpad for scrolling in the navigation layers (cursor left, cursor right layers of the keyboard)
+    navigation_layer_scroller: navigation_layer_scroller{
+        layers           = <7 8>;
+     	input-processors = <&zip_xy_to_scroll_mapper>;
+//	process-next; // To process the scroller layer, if/when it is activated. Without this command the processing would stop here.
+    };
+
+  };
+
+
+
 
 / {
     chosen {
@@ -118,4 +134,11 @@
         rows = <0>;
         events = <0>;
     };
+};
+
+&mmv {
+    x-input-code = <INPUT_REL_X>;
+    y-input-code = <INPUT_REL_Y>;
+    time-to-max-speed-ms = <300>;
+     acceleration-exponent = <1>;
 };

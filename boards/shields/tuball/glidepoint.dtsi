@@ -1,0 +1,43 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/input/input-event-codes.h>
+
+/* 
+    For the *peripheral* side that has SPI pointing device with it. Not even dongle.overlay should have this.
+    What's here: pinctrl & trackball input device node (SPI) for right & dongle side.
+*/
+
+
+// Touchpad configuration
+
+&i2c0 {
+    status = "okay";
+    
+    glidepoint: glidepoint@2a {
+        compatible = "cirque,pinnacle";
+        reg = <0x2a>;
+        status = "okay";
+	// AK: Used 107 in the middle of Nice!Nano since no free ProMicro pins are left in the key matrix. 
+	dr-gpios = <&gpio1 7 GPIO_ACTIVE_HIGH>;
+
+        sensitivity = "1x";
+        sleep;
+        //no-taps;
+    };
+ };
+
+&i2c0_default {
+    group1 {
+      bias-pull-up;
+    };
+};
+
+
+/{
+    glidepoint_input: glidepoint_input {
+        compatible = "zmk,input-listener";
+        device = <&glidepoint>;
+        // Options for cirque, to be defined in the keyboard shield
+        input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT) &zip_xy_scaler 10 4>;
+    };
+}; 
+
