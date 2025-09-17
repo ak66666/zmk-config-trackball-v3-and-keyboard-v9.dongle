@@ -15,6 +15,10 @@
             compatible = "zmk,input-split";
             reg = <0>;
         };
+        glidepoint_split_input: glidepoint_split_input@2a { // touchpad's split input device
+            compatible = "zmk,input-split";
+            reg = <0x2a>;
+        };
     };
 
     trackball_split_listener: trackball_split_listener { // listener for split input device
@@ -22,28 +26,12 @@
         status = "disabled"; // disable for .keymap to add input processors without undefined reference error
         device = <&trackball_split_input>;
     };
-};
-
-
-
-/{
-    split_inputs { // split input devices
-        #address-cells = <1>;
-        #size-cells = <1>;
-
-        glidepoint_split_input: glidepoint_split_input@2a { // touchpad's split input device
-            compatible = "zmk,input-split";
-            reg = <0x2a>;
-        };
-    };
 
     glidepoint_split_listener: glidepoint_split_listener {
         compatible = "zmk,input-listener";
         status = "disabled"; // disable for .keymap to add input processors without undefined reference error
         device = <&glidepoint_split_input>;
     };
-
 };
-
 
 
