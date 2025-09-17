@@ -10,6 +10,7 @@ https://github.com/ak66666/zmk-config-thumbsup
 Keyboard supports ProGlide Cirque touchpad. 
 All the functions of the keyboard and the trackball are preserved.
 
+![Photos](https://github.com/ak66666/zmk-config-trackball-v3-and-keyboard-v9.dongle/blob/main/photos/20250917_Keyboard_Trackball_Dongle.jpg)
 
 From kai-cosmos:
 What's good about ZMK dongles?<br/>
