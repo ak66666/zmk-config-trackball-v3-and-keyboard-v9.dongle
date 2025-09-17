@@ -139,9 +139,9 @@
     };
 };
 
-&mmv {
-    x-input-code = <INPUT_REL_X>;
-    y-input-code = <INPUT_REL_Y>;
-    time-to-max-speed-ms = <300>;
-     acceleration-exponent = <1>;
-};
+//&mmv {
+//    x-input-code = <INPUT_REL_X>;
+//    y-input-code = <INPUT_REL_Y>;
+//    time-to-max-speed-ms = <300>;
+//     acceleration-exponent = <1>;
+//};
