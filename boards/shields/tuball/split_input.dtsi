@@ -28,7 +28,7 @@
         device = <&trackball_split_input>;
     };
 
-    glidepoint_input_listener: glidepoint_input_listener {
+    glidepoint_split_listener: glidepoint_split_listener {
         compatible = "zmk,input-listener";
         status = "disabled"; // disable for .keymap to add input processors without undefined reference error
         device = <&glidepoint_split_input>;
