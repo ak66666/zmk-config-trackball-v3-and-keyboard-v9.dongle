@@ -143,14 +143,33 @@
 		&trans &trans &trans &trans &trans &trans                    &trans &trans &trans &trans &trans &trans 
 		              &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans 
                 	
-			&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans>;};
+				/* Trackball */ 
+			&kp K_FORWARD         	&trans
+		&trans					&trans
+		&kp K_BACK				&trans
+	                   /* Inner Buttons  */
+		&trans &trans &trans
+                     /* Handiness         Orientation */
+			&trans 			&trans
+		>;
+	};
 /* 5 */ THUMB_RIGHT_SCROLL  {bindings = <		
 		&trans &trans &trans &trans &trans &trans                    &trans &trans &trans &trans &trans &trans 
 		&trans &trans &trans &trans &trans &trans                    &trans &trans &trans &trans &trans &trans 
 		&trans &trans &trans &trans &trans &trans                    &trans &trans &trans &trans &trans &trans 
 		              &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans 
                 	
-			&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans>;};
+				/* Trackball */ 
+			&trans			&kp K_FORWARD
+		&trans					&trans
+		&trans				&kp K_BACK
+	                   /* Inner Buttons  */
+		&trans &trans &trans
+                     /* Handiness         Orientation */
+			&trans 			&trans
+		>;
+	};
+
 /* 6 */ FINGERS_SCROLL     {bindings = <		
 		&trans &trans &trans &trans &trans &trans                    &trans &trans &trans &trans &trans &trans 
 		&trans &trans &trans &trans &trans &trans                    &trans &trans &trans &trans &trans &trans 
