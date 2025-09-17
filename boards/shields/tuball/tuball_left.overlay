@@ -1,7 +1,7 @@
 #include "tuball.dtsi"
 #include "tuball-layouts.dtsi"
 #include "glidepoint.dtsi"
-#include "split_input.dtsi"
+#include "split_input_proglide.dtsi"
 #include <dt-bindings/zmk/input_transform.h>
 
 
