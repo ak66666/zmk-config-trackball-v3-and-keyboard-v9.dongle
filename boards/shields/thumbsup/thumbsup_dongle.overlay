@@ -18,8 +18,8 @@
         lt: layer_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
+            flavor = "balanced";
+            tapping-term-ms = <140>;
             bindings = <&mo>, <&kp>;
             display-name = "Layer-Tap";
         };
@@ -160,7 +160,3 @@
 //    time-to-max-speed-ms = <300>;
 //     acceleration-exponent = <1>;
 //};
-
-&mt {
-    tapping-term-ms = <140>;
-};
