@@ -10,6 +10,10 @@ https://github.com/ak66666/zmk-config-thumbsup
 Keyboard supports ProGlide Cirque touchpad. 
 All the functions of the keyboard and the trackball are preserved.
 
+This firmware works even if one of the devices (Peripherals in ZMK parlance) is missing or turned off.
+It can be used for keyboard without the trackball, and vice versa.
+I.e. I don't need to prepare a separate package for v9 board with the dongle, will use this one.
+
 ![Photos](https://github.com/ak66666/zmk-config-trackball-v3-and-keyboard-v9.dongle/blob/main/photos/20250917_Keyboard_Trackball_Dongle.jpg)
 
 From kai-cosmos:
