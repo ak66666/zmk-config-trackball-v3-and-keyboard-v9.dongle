@@ -31,9 +31,9 @@
 #define NUMBERS_FKEYS 9
 #define EXTRA_RIGHT 10
 
-// Mouse speed increased
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1000  // default: 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 15    // default: 10
+// Mouse speed changed
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 600  // default: 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 10    // default: 10
 //#include <dt-bindings/zmk/pointing.h>
 
 / {
