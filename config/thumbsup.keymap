@@ -37,8 +37,6 @@
 //#include <dt-bindings/zmk/pointing.h>
 
 / {
-
-/ {
     behaviors {
         lt: layer_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -49,8 +47,6 @@
             display-name = "Layer-Tap";
         };
     };
-};
-
 
     keymap {
         compatible = "zmk,keymap";
