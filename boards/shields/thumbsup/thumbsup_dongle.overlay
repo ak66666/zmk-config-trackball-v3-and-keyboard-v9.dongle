@@ -13,17 +13,21 @@
 #include <behaviors/input_gestures_accel.dtsi>
 #include <dt-bindings/zmk/behaviors.h>
 
-/ {
-    behaviors {
-        lt: layer_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <120>;
-            bindings = <&mo>, <&kp>;
-            display-name = "Layer-Tap";
-        };
-    };
+/// {
+//    behaviors {
+//        lt: layer_tap {
+//            compatible = "zmk,behavior-hold-tap";
+//            #binding-cells = <2>;
+//            flavor = "hold-preferred";
+//            tapping-term-ms = <120>;
+//            bindings = <&mo>, <&kp>;
+//            display-name = "Layer-Tap";
+//        };
+//    };
+//};
+
+&lt {
+    tapping-term-ms = <120>; // Default - 200
 };
 
 &physical_layout0 {
