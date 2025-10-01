@@ -21,7 +21,7 @@
 #define THUMB_LEFT  0 	//default for the keyboard as well
 #define THUMB_RIGHT 1
 #define FINGER_LEFT 2
-#define FINGER_RIGHT 3 
+#define FINGER_RIGHT 3 	// This layer is reached through tri-state combination of THUMB_RIGHT and FINGER_LEFT, i.e. no &mo or &lt will lead to this layer directly.
 #define THUMB_LEFT_SCROLL  4
 #define THUMB_RIGHT_SCROLL 5
 #define FINGERS_SCROLL 6
@@ -101,7 +101,7 @@
 	                   /* Inner Buttons  */
 		            &trans &trans &trans
                      /* Handiness         Orientation */
-			&trans                  &mo 2
+			&trans                  &trans
             >;
         };
 
@@ -120,7 +120,7 @@
 	                   /* Inner Buttons  */
 		            &trans &trans &trans
                      /* Handiness         Orientation */
-			&mo 3                  &trans
+			&trans                  &trans
             >;
         };
 
