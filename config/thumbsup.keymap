@@ -304,6 +304,7 @@
         tri_layer_numbers {
             if-layers = <CURSOR_RIGHT CURSOR_LEFT>;
             then-layer = <NUMBERS_FKEYS>;
+        };
         tri_layer_direction {
             if-layers = <FINGER_LEFT THUMB_RIGHT>;
             then-layer = <FINGER_RIGHT>;
