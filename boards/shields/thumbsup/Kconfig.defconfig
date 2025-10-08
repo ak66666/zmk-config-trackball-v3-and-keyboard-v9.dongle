@@ -16,6 +16,10 @@ config ZMK_SPLIT_ROLE_CENTRAL
 	default y
 #config ZMK_LOG_LEVEL
 #    default 5
+
+# Reducing the USB polling rate from 1000Hz (default value of 1) to 100Hz
+config USB_HID_POLL_INTERVAL_MS
+	default 10
 endif
 
 if SHIELD_THUMBSUP_TRACKBALL
