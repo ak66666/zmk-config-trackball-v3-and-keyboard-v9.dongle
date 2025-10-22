@@ -155,9 +155,9 @@
 		              &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans 
                 	
 				/* Trackball */ 
-			&kp RA(RIGHT)	&trans
+			&mkp MB5 /*forward*/		&trans
 		&trans					&trans
-		&kp RA(LEFT)				&trans
+		&mkp MB4 /*back*/				&trans
 	                   /* Inner Buttons  */
 		&trans &trans &trans
                      /* Handiness         Orientation */
@@ -171,9 +171,9 @@
 		              &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans 
                 	
 				/* Trackball */ 
-			&trans			&kp RA(RIGHT)
+			&trans			&mkp MB5 /*forward*/
 		&trans					&trans
-		&trans				&kp RA(LEFT)
+		&trans				&mkp MB4 /*back*/
 	                   /* Inner Buttons  */
 		&trans &trans &trans
                      /* Handiness         Orientation */
