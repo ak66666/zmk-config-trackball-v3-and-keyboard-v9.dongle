@@ -36,22 +36,18 @@
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 10    // default: 10
 //#include <dt-bindings/zmk/pointing.h>
 
-// / {
-//     behaviors {
-//         lt: layer_tap {
-//             compatible = "zmk,behavior-hold-tap";
-//             #binding-cells = <2>;
-//             flavor = "hold-preferred";
-//             tapping-term-ms = <120>;
-//             bindings = <&mo>, <&kp>;
-//             display-name = "Layer-Tap";
-//         };
-//     };
+/ {
+    behaviors {
+        lt: layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+//            flavor = "hold-preferred";
+            tapping-term-ms = <120>;
+            bindings = <&mo>, <&kp>;
+            display-name = "Layer-Tap";
+        };
+    };
 
-&lt {
-    tapping-term-ms = <120>; // This is the value already set by default
-};
- 
     keymap {
         compatible = "zmk,keymap";
 
