@@ -36,7 +36,8 @@
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 10    // default: 10
 //#include <dt-bindings/zmk/pointing.h>
 
-// / {
+/ {
+
 //     behaviors {
 //          lt: layer_tap {
 //             compatible = "zmk,behavior-hold-tap";
