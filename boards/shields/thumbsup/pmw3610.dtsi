@@ -1,4 +1,17 @@
+#include <physical_layouts.dtsi>
+
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/ext_power.h>
+
+#include <dt-bindings/zmk/matrix_transform.h>
+#include <input/processors.dtsi>
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+
+
+
  
 /* 
     For the *peripheral* side that has SPI pointing device with it. Not even dongle.overlay should have this.
