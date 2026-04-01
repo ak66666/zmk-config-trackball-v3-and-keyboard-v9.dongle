@@ -1,8 +1,7 @@
-#include <zmk/behavior_queue.h>
 #include "thumbsup.dtsi"
+#include "thumbsup-layouts.dtsi"
 #include "pmw3610.dtsi"
 #include "split_input.dtsi"
-#include "thumbsup-layouts.dtsi"
 #include <dt-bindings/zmk/input_transform.h>
 
 &default_transform {
