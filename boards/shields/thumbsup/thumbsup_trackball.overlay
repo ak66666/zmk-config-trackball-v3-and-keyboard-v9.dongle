@@ -1,3 +1,10 @@
+#include <dt-bindings/zmk/matrix_transform.h>
+#include <input/processors.dtsi>
+//#include "a_ball-layout.dtsi"
+//#include <dt-bindings/zmk/input_transform.h>
+//#include "a_ball.dtsi"
+
+ //---
 #include "thumbsup.dtsi"
 #include "thumbsup-layouts.dtsi"
 #include "pmw3610.dtsi"
