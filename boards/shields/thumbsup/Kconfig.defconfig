@@ -1,0 +1,33 @@
+#config ZMK_LOGGING_MINIMAL
+#    bool "Suppress all ZMK debug log messages"
+#    default false
+
+if SHIELD_THUMBSUP_DONGLE || SHIELD_THUMBSUP_KEYBOARD || SHIELD_THUMBSUP_TRACKBALL
+config ZMK_SPLIT 
+    default y
+config ZMK_POINTING
+    default y
+endif
+
+if SHIELD_THUMBSUP_DONGLE
+config ZMK_KEYBOARD_NAME
+	default "thumbsup"
+config ZMK_SPLIT_ROLE_CENTRAL
+	default y
+#config ZMK_LOG_LEVEL
+#    default 5
+
+# Reducing the USB polling rate from 1000Hz (default value of 1) to 100Hz
+config USB_HID_POLL_INTERVAL_MS
+	default 10
+endif
+
+if SHIELD_THUMBSUP_TRACKBALL
+config SPI
+    default y
+endif
+
+#if SHIELD_THUMBSUP_KEYBOARD
+#config I2C
+#    default y
+#endif

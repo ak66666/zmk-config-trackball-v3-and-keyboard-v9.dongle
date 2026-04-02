@@ -1,0 +1,15 @@
+file_format: "1"
+id: thumbsup
+name: thumbsup
+type: shield
+url: https://github.com/ak66666/zmk-config-trackball-v3-and-keyboard-v9.dongle
+requires: [pro_micro]
+features:
+  - keys
+  - trackball
+  - dongle
+  - pointer
+siblings:
+  - thumbsup_dongle
+  - thumbsup_keyboard
+  - thumbsup_trackball
