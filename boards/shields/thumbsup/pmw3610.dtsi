@@ -46,7 +46,7 @@
         y-input-code = <INPUT_REL_Y>;
 
         // force-awake will cause warping and cursor jumping. Don't recommend now.
-        force-awake;
+//AK        force-awake;
         /* keep the sensor awake while ZMK activity state is ACTIVE,
            fallback to normal downshift mode after ZMK goes into IDLE / SLEEP mode.
            thus, the sensor would be a `wakeup-source` */
