@@ -7,6 +7,8 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <input/processors.dtsi>
 
+#include <zmk/keymap.h>
+
 &default_transform {
 	row-offset = <4>;
 };
