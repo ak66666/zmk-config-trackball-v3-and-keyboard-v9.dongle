@@ -22,6 +22,7 @@ manifest:
     - name: zmk-pmw3610-driver
       remote: antoinegs
       revision: main
+      path: modules/drivers/zmk-pmw3610-driver
     - name: zmk-pointing-acceleration-alpha
       remote: nuovotaka
       revision: main
