@@ -13,6 +13,8 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/ext_power.h>
+#include <behaviors/input_gestures_accel.dtsi>
+#include <dt-bindings/zmk/behaviors.h>
 
 // keep all behavior settings for zmk studio
 #define ZMK_BEHAVIORS_OMIT_KT
