@@ -2,10 +2,12 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: antoinegs
-      url-base: https://github.com/AntoineGS
+#    - name: antoinegs
+#      url-base: https://github.com/AntoineGS
 #    - name: badjeff
  #      url-base: https://github.com/badjeff
+    - name: ak66666
+      url-base: https://github.com/ak66666
     - name: nuovotaka
       url-base: https://github.com/nuovotaka
     - name: petejohanson
@@ -20,7 +22,7 @@ manifest:
 #      remote: badjeff
 #      revision: main
     - name: zmk-pmw3610-driver
-      remote: antoinegs
+      remote: ak66666
       revision: main
       path: modules/drivers/zmk-pmw3610-driver
     - name: zmk-pointing-acceleration-alpha
