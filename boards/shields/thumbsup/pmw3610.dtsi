@@ -36,19 +36,17 @@
 
     trackball: trackball@0 {
         status = "okay";
-        compatible = "zmk,pmw3610-alt";
+        compatible = "pixart,pmw3610";
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-//        cpi = <600>;
-//        evt-type = <INPUT_EV_REL>;
-//        x-input-code = <INPUT_REL_X>;
-//        y-input-code = <INPUT_REL_Y>;
-
-//AK: Looks like it breaks the trackball part - buttons work but not the sensor :	enable-pm-support;
+        cpi = <600>;
+        evt-type = <INPUT_EV_REL>;
+        x-input-code = <INPUT_REL_X>;
+        y-input-code = <INPUT_REL_Y>;
 
         // force-awake will cause warping and cursor jumping. Don't recommend now.
-//AK        force-awake;
+        force-awake;
         /* keep the sensor awake while ZMK activity state is ACTIVE,
            fallback to normal downshift mode after ZMK goes into IDLE / SLEEP mode.
            thus, the sensor would be a `wakeup-source` */
