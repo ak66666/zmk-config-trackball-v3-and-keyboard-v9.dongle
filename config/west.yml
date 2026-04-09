@@ -2,8 +2,8 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: badjeff
-      url-base: https://github.com/badjeff
+    - name: ak66666
+      url-base: https://github.com/ak66666
     - name: nuovotaka
       url-base: https://github.com/nuovotaka
     - name: petejohanson
@@ -15,7 +15,7 @@ manifest:
       revision: v0.3
       import: app/west.yml
     - name: zmk-pmw3610-driver
-      remote: badjeff
+      remote: ak66666
       revision: main
     - name: zmk-pointing-acceleration-alpha
       remote: nuovotaka
